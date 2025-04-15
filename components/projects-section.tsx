@@ -1,11 +1,17 @@
-"use client"
+"use client";
 
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink, Github } from "lucide-react"
-import Link from "next/link"
-import { motion } from "framer-motion"
-import Image from "next/image"
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 const projects = [
   {
@@ -16,7 +22,7 @@ const projects = [
     liveLink: "https://teamexe.tech",
     githubLink: "#",
     date: "Feb 2025",
-    image: "/projects/exe-club.jpg",
+    image: "/images/exe.jpg",
   },
   {
     title: "MemeBuzz",
@@ -26,7 +32,7 @@ const projects = [
     liveLink: "https://memebuzzexe.site",
     githubLink: "#",
     date: "Jan 2025",
-    image: "/projects/memebuzz.jpg",
+    image: "/images/memebuzz.jpg",
   },
   {
     title: "LinkHive",
@@ -36,7 +42,7 @@ const projects = [
     liveLink: "https://link-hive.netlify.app",
     githubLink: "#",
     date: "Jan 2025",
-    image: "/projects/linkhive.jpg",
+    image: "/images/linkhive.png",
   },
   {
     title: "True-Feedback",
@@ -46,7 +52,7 @@ const projects = [
     liveLink: "#",
     githubLink: "#",
     date: "2024",
-    image: "/projects/true-feedback.jpg",
+    image: "/images/true-feedback.png",
   },
   {
     title: "ECommerce Website",
@@ -56,9 +62,9 @@ const projects = [
     liveLink: "#",
     githubLink: "#",
     date: "2024",
-    image: "/projects/ecommerce.jpg",
+    image: "/images/eco.avif",
   },
-]
+];
 
 export default function ProjectsSection() {
   const container = {
@@ -69,12 +75,12 @@ export default function ProjectsSection() {
         staggerChildren: 0.2,
       },
     },
-  }
+  };
 
   const item = {
     hidden: { opacity: 0, y: 20 },
     show: { opacity: 1, y: 0 },
-  }
+  };
 
   return (
     <section id="projects" className="py-20 px-4 max-w-6xl mx-auto">
@@ -95,11 +101,15 @@ export default function ProjectsSection() {
         viewport={{ once: true }}
       >
         {projects.map((project, index) => (
-          <motion.div key={index} variants={item} transition={{ duration: 0.5, delay: index * 0.1 }}>
+          <motion.div
+            key={index}
+            variants={item}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
             <Card className="bg-zinc-900/50 border-zinc-800 backdrop-blur-sm hover:border-cyan-600 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-700/20 h-full overflow-hidden group">
               <div className="w-full h-48 overflow-hidden relative">
                 <Image
-                  src={`/placeholder.svg?height=400&width=800`}
+                  src={project.image}
                   alt={project.title}
                   width={800}
                   height={400}
@@ -115,9 +125,13 @@ export default function ProjectsSection() {
               </div>
               <CardHeader>
                 <div className="flex justify-between items-start">
-                  <CardTitle className="text-xl font-bold">{project.title}</CardTitle>
+                  <CardTitle className="text-xl font-bold">
+                    {project.title}
+                  </CardTitle>
                 </div>
-                <CardDescription className="text-gray-400">{project.technologies.join(" • ")}</CardDescription>
+                <CardDescription className="text-gray-400">
+                  {project.technologies.join(" • ")}
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 mb-4">{project.description}</p>
@@ -128,7 +142,8 @@ export default function ProjectsSection() {
                       target="_blank"
                       className="text-cyan-400 hover:text-cyan-300 flex items-center group"
                     >
-                      <ExternalLink className="w-4 h-4 mr-1 group-hover:translate-x-1 transition-transform" /> Live
+                      <ExternalLink className="w-4 h-4 mr-1 group-hover:translate-x-1 transition-transform" />{" "}
+                      Live
                     </Link>
                   )}
                   <Link
@@ -136,7 +151,8 @@ export default function ProjectsSection() {
                     target="_blank"
                     className="text-cyan-400 hover:text-cyan-300 flex items-center group"
                   >
-                    <Github className="w-4 h-4 mr-1 group-hover:translate-y-[-2px] transition-transform" /> Code
+                    <Github className="w-4 h-4 mr-1 group-hover:translate-y-[-2px] transition-transform" />{" "}
+                    Code
                   </Link>
                 </div>
               </CardContent>
@@ -145,5 +161,5 @@ export default function ProjectsSection() {
         ))}
       </motion.div>
     </section>
-  )
+  );
 }

@@ -35,15 +35,13 @@ export default function AboutSection() {
                 >
                   <div className="w-full h-full bg-gradient-to-br from-cyan-600 to-cyan-400 flex items-center justify-center text-6xl font-bold text-white">
                     <Image
-                      src="/your-image-path.jpg" // Replace with real image
-                      alt="Piyush Mishra"
+                      src="/images/piyush.jpeg" // Replace with real image
+                      alt=""
                       width={256}
                       height={256}
                       className="object-cover"
                     />
-                    <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white">
-                      PM
-                    </div>
+                    <div className="absolute inset-0 flex items-center justify-center text-6xl font-bold text-white"></div>
                   </div>
                 </motion.div>
               </div>
