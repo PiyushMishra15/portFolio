@@ -64,12 +64,16 @@ export default function AboutSection() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <Button
-                    className="bg-gradient-to-r from-cyan-600 to-cyan-400 hover:from-cyan-500 hover:to-cyan-300 border-0 shadow-lg shadow-cyan-700/20"
-                    aria-label="Download my resume"
-                  >
-                    <Download className="mr-2 h-4 w-4" /> Download Resume
-                  </Button>
+                 <a
+  href="https://www.dropbox.com/scl/fi/7lv9jpo11vv3hd3selgnq/PiyushResume1.pdf?rlkey=k0se6xkx11qb6keu4f57wmj5o&st=ga5ejtj4&dl=1"
+  aria-label="Download my resume"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Button className="bg-gradient-to-r from-cyan-600 to-cyan-400 hover:from-cyan-500 hover:to-cyan-300 border-0 shadow-lg shadow-cyan-700/20">
+    <Download className="mr-2 h-4 w-4" /> Download Resume
+  </Button>
+</a>
                 </motion.div>
               </div>
             </div>
