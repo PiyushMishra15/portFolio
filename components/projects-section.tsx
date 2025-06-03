@@ -15,6 +15,16 @@ import Image from "next/image";
 
 const projects = [
   {
+  title: "Cropify – Direct Farm-to-Consumer Platform",
+  description:
+    "Developed a MERN stack web app connecting farmers directly to consumers, bypassing middlemen for fair pricing and fresh produce. Integrated CropSense AI for crop recommendations based on soil, rainfall, and climate data. Enabled real-time communication via WebSockets and location-based browsing using Leaflet.",
+  technologies: ["MongoDB", "Express.js", "React.js", "Node.js", "WebSocket", "Leaflet", "AI"],
+  liveLink: "https://cropify-frontend.vercel.app/",
+  githubLink: "#",
+  date: "June 2025",
+  image: "https://repository-images.githubusercontent.com/745557309/7b059b8d-fa12-4763-96eb-6bd60f781b7b"
+},
+  {
     title: "EXE Club Website",
     description:
       "Developed animated and responsive official site using Framer Motion and AOS, increasing traffic retention by 40%. Reduced bounce rate by 25% by simplifying UX and optimizing mobile flow.",
