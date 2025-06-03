@@ -65,7 +65,7 @@ export default function AboutSection() {
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                  <a
-  href="https://www.dropbox.com/scl/fi/7lv9jpo11vv3hd3selgnq/PiyushResume1.pdf?rlkey=k0se6xkx11qb6keu4f57wmj5o&st=ga5ejtj4&dl=1"
+  href="https://drive.google.com/file/d/14uU_aYsAv_xKWaS2wZXXHKiu2km_BNVa/view?usp=sharing"
   aria-label="Download my resume"
   target="_blank"
   rel="noopener noreferrer"
